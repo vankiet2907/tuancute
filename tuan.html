@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>IM SO SORRY BABY</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial, sans-serif;
+}
+.card{
+    background: rgba(255,255,255,0.85);
+    padding:40px 60px;
+    border-radius:22px;
+    text-align:center;
+    z-index:10;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#e85d75;
+    font-size:40px;
+}
+
+p{
+    font-size:20px;
+}
+
+.fall{
+    position:absolute;
+    top:-30px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform: translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🎉 Anh Xin Lỗi Em nhiều ORO ơi 🎉</h1>
+    <p><b>Anh Xin Lỗi Vì đã vô tâm với em </b></p>
+    <p>Mong nàng thơ tha lỗi cho anh nhaaa 💖</p>
+</div>
+
+<script>
+const icons = ["🎂","🍰","🎉","💖","✨"];
+
+for(let i=0;i<40;i++){
+    let s = document.createElement("span");
+    s.className = "fall";
+    s.innerHTML = icons[Math.floor(Math.random()*icons.length)];
+    s.style.left = Math.random()*100 + "vw";
+    s.style.fontSize = 20 + Math.random()*25 + "px";
+    s.style.animationDuration = 3 + Math.random()*4 + "s";
+    document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
